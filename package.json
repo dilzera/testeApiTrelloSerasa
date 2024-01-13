@@ -1,0 +1,20 @@
+{
+  "name": "testetrelloserasa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "report:merge": "npx mochawesome-merge \"cypress/reports/*.json\" > \"cypress/reports/report.json\"",
+    "report:generate": "npx marge cypress/reports/report.json --reportDir cypress/reports",
+    "clean:reports": "rimraf cypress/reports && md cypress\\reports"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "rimraf": "^5.0.5"
+  }
+}

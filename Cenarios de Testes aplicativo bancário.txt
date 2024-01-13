@@ -1,0 +1,82 @@
+Cenarios de testes do aplicativo bancário
+
+Cenários de Teste Funcionais
+
+
+Teste de Transferência Válida:
+
+Premissa: O usuário tem saldo suficiente.
+Ação: Realizar uma transferência com valor menor ou igual ao saldo disponível.
+Resultado esperado: A transferência é efetuada com sucesso e o saldo é atualizado.
+
+
+Teste de Saldo Insuficiente:
+
+Premissa: O usuário tem saldo insuficiente para a transferência.
+Ação: Tentar realizar uma transferência com valor superior ao saldo disponível.
+Resultado esperado: A transferência é bloqueada e uma mensagem de erro de saldo insuficiente é exibida.
+
+
+Teste de Validação do Cliente Destino:
+
+Premissa: O campo "Cliente destino" deve ser preenchido com um identificador válido (CPF/CNPJ/número de conta).
+Ação: Inserir um identificador inválido e tentar realizar a transferência.
+Resultado esperado: O sistema valida o campo e exibe uma mensagem de erro se o identificador não for válido.
+
+
+Teste de Formato do Valor de Transferência:
+
+Premissa: O campo "Valor" deve aceitar apenas números e, opcionalmente, separador decimal.
+Ação: Inserir caracteres não numéricos e tentar realizar a transferência.
+Resultado esperado: O sistema bloqueia a entrada de caracteres não numéricos.
+
+
+Teste de Data de Efetivação Futura:
+
+Premissa: O usuário pode agendar transferências para datas futuras.
+Ação: Definir uma data de efetivação futura e realizar a transferência.
+Resultado esperado: A transferência é agendada para a data especificada.
+
+
+Teste de Cancelamento de Transferência:
+
+Premissa: O usuário pode cancelar uma transferência antes de sua efetivação.
+Ação: Iniciar uma transferência e depois cancelá-la.
+Resultado esperado: A transferência é cancelada e não afeta o saldo.
+
+
+Teste de Interface com Saldo Negativo:
+
+Premissa: A interface deve lidar corretamente com saldos negativos, se permitidos.
+Ação: Visualizar o saldo quando este estiver negativo.
+Resultado esperado: O saldo negativo é exibido de forma clara na interface.
+
+
+Cenários de Teste Não Funcionais
+
+Teste de Desempenho:
+
+Premissa: O aplicativo deve processar transferências em um tempo razoável.
+Ação: Medir o tempo de resposta do aplicativo ao realizar transferências.
+Resultado esperado: O aplicativo completa as operações dentro do tempo aceitável definido pelos requisitos.
+
+
+Teste de Segurança:
+
+Premissa: As informações de transferência são sensíveis e devem ser protegidas.
+Ação: Verificar se a transmissão de dados é criptografada e se há mecanismos de autenticação e autorização robustos.
+Resultado esperado: Os dados são transmitidos de forma segura e apenas usuários autenticados podem realizar operações.
+
+
+Teste de Usabilidade:
+
+Premissa: O aplicativo deve ser fácil de usar e intuitivo.
+Ação: Avaliar a clareza das instruções e a facilidade de completar uma transferência.
+Resultado esperado: Usuários conseguem realizar transferências sem dificuldades e sem necessidade de suporte adicional.
+
+
+Teste de Conformidade:
+
+Premissa: O aplicativo deve estar em conformidade com as regulamentações bancárias.
+Ação: Revisar as funcionalidades do aplicativo para garantir que atendem às regulamentações.
+Resultado esperado: O aplicativo cumpre todos os requisitos regulatórios pertinentes.
